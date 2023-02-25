@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83b5bda3-38b8-42c8-8fa1-b53f0c1f1b98/deploy-status)](https://app.netlify.com/sites/polite-longma-ea5b33/deploys).  **[Live site here](https://polite-longma-ea5b33.netlify.app/)**
+
 # Frontend Mentor - QR code component
 
 ![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
