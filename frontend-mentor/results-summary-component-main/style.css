@@ -1,0 +1,198 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* colours */
+* {
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root {
+  --lightRed: hsl(0, 100%, 67%);
+  --lightRedFaded: hsla(0, 100%, 67%, 0.1);
+  --orangeyYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+  --orangeyYellowFaded: hsla(39, 100%, 56%, 0.1);
+  --greenTealFaded: hsla(166, 100%, 37%, 0.1);
+  --cobaltBlueFaded: hsla(234, 85%, 45%, 0.1);
+  --white: hsl(0, 0%, 100%);
+  --whiteFaded8: hsla(0, 0%, 100%, 0.8);
+  --whiteFaded6: hsla(0, 0%, 100%, 0.6);
+  --whiteFaded4: hsla(0, 0%, 100%, 0.4);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+  --darkGrayBlueFaded: hsla(224, 30%, 27%, 0.6);
+  --lightSlateBlue: hsl(252, 100%, 67%);
+  --lightRoyalBlue: hsl(241, 81%, 54%);
+  --violetBlue: hsla(256, 72%, 46%, 1);
+  --persianBlue: hsla(241, 72%, 46%, 0);
+}
+
+p,
+span {
+  font-size: 1.125em;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mainContent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainBox {
+  display: flex;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px var(--paleBlue);
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background: linear-gradient(
+    var(--lightSlateBlue),
+    var(--lightRoyalBlue)
+  );
+  border-radius: 25px;
+  padding: 0px 40px;
+}
+.summaryBox {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px;
+  padding: 40px;
+}
+
+.summaryHeading {
+  align-self: first baseline;
+}
+
+.summaryItems {
+  align-self: stretch;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.reaction {
+  color: var(--lightRed);
+  background-color: var(--lightRedFaded);
+}
+.memory {
+  color: var(--orangeyYellow);
+  background-color: var(--orangeyYellowFaded);
+}
+.verbal {
+  color: var(--greenTeal);
+  background-color: var(--greenTealFaded);
+}
+.visual {
+  color: var(--cobaltBlue);
+  background-color: var(--cobaltBlueFaded);
+}
+.summaryScore {
+  display: flex;
+}
+
+.score {
+  color: var(--darkGrayBlue);
+  font-weight: 700;
+}
+
+.outOf {
+  color: var(--darkGrayBlueFaded);
+}
+
+.continueButton {
+  color: var(--white);
+  background-color: var(--darkGrayBlue);
+  font-size: 1.2em;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  height: 50px;
+}
+.continueButton:hover {
+  background: linear-gradient(
+    var(--lightRoyalBlue),
+    var(--lightSlateBlue)
+  );
+  color: var(--white);
+  cursor: pointer;
+}
+
+.resultCircle {
+  border-radius: 50%;
+  background: linear-gradient(var(--violetBlue), var(--persianBlue));
+  height: 12.5em;
+  width: 12.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resultHeading {
+  color: var(--whiteFaded8);
+  font-size: 1.5em;
+}
+.resultScore {
+  color: var(--white);
+  font-size: 5em;
+  font-weight: 700;
+}
+.resultOutOf {
+  font-size: 1.125em;
+  color: var(--whiteFaded4);
+}
+.resultClass {
+  color: var(--white);
+  font-size: 2em;
+}
+.resultText {
+  color: var(--whiteFaded6);
+  padding: 0 15px;
+  text-align: center;
+}
+
+/* breakpoint set to 840px (375px specified in design guide) as that was the point the layout began to deform for me, so this maintains better readbility */
+@media only screen and (min-width: 841px) {
+    .mainBox {
+          width: 740px;
+        height: 520px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .mainBox {
+        flex-wrap: wrap;
+        box-shadow: none;
+        max-width: 740px;
+    }    
+
+    .summaryBox, .resultBox {
+        overflow: hidden;
+        flex: 1 1 80%;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main class="mainContent">
+      <div class="mainBox">
+        <div class="resultBox">
+          <p class="resultHeading">Your Result</p>
+          <div class="resultCircle">
+            <span class="resultScore">76</span>
+            <span class="resultOutOf">of 100</span>
+          </div>
+          <p class="resultClass">Great</p>
+          <span class="resultText">
+            You scored higher than 65% of the people who have taken
+            these tests.
+          </span>
+        </div>
+        <div class="summaryBox">
+          <h2 class="summaryHeading">Summary</h2>
+          <div class="summaryItems reaction">
+            <!-- set by data_import.js -->
+          </div>
+          <div class="summaryItems memory">
+            <!-- set by data_import.js -->
+          </div>
+          <div class="summaryItems verbal">
+            <!-- set by data_import.js -->
+          </div>
+          <div class="summaryItems visual">
+            <!-- set by data_import.js -->
+          </div>
+          <button class="summaryItems continueButton">
+            Continue
+          </button>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/ccozens/frontend-practice"
+          >Chris</a
+        >.
+      </div>
+    </main>
+  </body>
+  <script src="./data_import.js"></script>
+  <noscript>Your browser does not support JavaScript!</noscript>
+</html>
